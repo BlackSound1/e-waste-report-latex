@@ -8,6 +8,7 @@
 \usepackage{csquotes}
 \usepackage[indent=20pt]{parskip}
 \usepackage{graphicx}
+\usepackage{hyperref}
 
 
 \geometry{a4paper, left=25mm, right=25mm, top=25mm, bottom=25mm}
@@ -162,7 +163,7 @@ acid baths to separate precious metals like silver, visible in \cite{greenpeaceB
 As I will show, the informal process of e-waste recycling poses serious hazards to health and the environment.
 Considering that these activities are frequently performed in less developed countries, this poses equity concerns as well.
 
-\section{Where Does E-Waste Go?}
+\section{Where Does E-Waste Go?} \label{sec:where}
 
 Tracking the movements of e-waste is difficult. The Basel Convention, an international agreement governing the transboundary
 movements of toxic and hazardous materials \cite{unitednationsBaselConventionControl1989}, does not fully record e-waste movements \cite[p. 17]{baldeGlobalTransboundaryEwaste2022}.
@@ -233,11 +234,124 @@ Many Nigerians became experts in e-waste recycling and vocational schools, gover
 
 \section{Problems with E-Waste}
 
+This section will enumerate some findings of the health, environmental, and equity effects of informal e-waste recycling,
+the dominant form of e-waste recycling in the world \cite[pp. 10, 30]{baldeGlobalEwasteMonitor2024}.
+
 \subsection{Health Problems}
+
+Informally recycling e-waste can pose problems for human health. An example is found in \cite{xuDifferentialProteomicExpression2016}.
+Elevated levels of cadmium (Cd) and lead (Pb) were found in the placentas of pregnant women who lived
+near the Guiyu WEEE recycling site in China, compared to nearby Shantou \cite[Sec. 3.1]{xuDifferentialProteomicExpression2016}.
+They found that the Guiyu women took longer to gestate their babies and the babies they gave birth to were smaller \cite[Sec. 3.1]{xuDifferentialProteomicExpression2016}.
+They also note that this exposure causes significant changes in multiple proteins and that cadmium exposure, in particular, can slow fetal growth 
+\cite[Sec. 5]{xuDifferentialProteomicExpression2016}.
+
+For another Guiyu example, \cite{xuBloodConcentrationsLead2018} found that school-age children had high levels of mercury (Hg) in their blood.
+The researchers note that exposure to lead and mercury in youth can cause damage to DNA, potentially increasing risk for cancers \cite[p. 1491]{xuBloodConcentrationsLead2018}.
+
+In Vietnam, \cite{eguchiOccurrencePerchlorateThiocyanate2014} found high levels of perchlorate in the blood of people near a WEEE recycling facility,
+in comparison with a rural site. Perchlorate can be used in explosive devices \cite[p. 29]{eguchiOccurrencePerchlorateThiocyanate2014}.
+These high levels were not otherwise associated with dietary and lifestyle habits \cite[p. 33]{eguchiOccurrencePerchlorateThiocyanate2014}.
+
+Sufficiently informal and unregulated practices put workers at increased risk of physical injury as well.
+In Ghana, researchers studying the Agbogbloshie WEEE recycling site found that only 38\% of workers used gloves, goggles,
+or other protective equipment \cite[Fig. 5]{adanuChallengesAdoptingSustainable2020}.
+The same study found that only 23\% of surveyed workers “occasionally” used specialized cable stripping
+machines instead of burning cables to extract the valuable materials within \cite[p. 4]{adanuChallengesAdoptingSustainable2020}.
+
+E-waste contains many toxic and dangerous chemicals, according to a meta-analysis \cite{parvezHealthConsequencesExposure2021}.
+Some of these chemicals include mercury, manganese (Mg), chromium (Cr), nickel (Ni),
+polycyclic aromatic hydrocarbons, polybrominated diphenyl ethers, polychlorinated bisphenols, dechlorane plus, and many others
+\cite[Sec. "Results"]{parvezHealthConsequencesExposure2021}.
 
 \subsection{Environmental Problems}
 
+Informally recycling WEEE can prove to be a serious environmental hazard. However,
+it is sometimes viewed more as an economical concern, than an ecological one \cite[p. 133]{albuquerqueElectronicJunkBest2019}.
+In this section, I will enumerate several findings from researchers.
+
+Taking data from \cite[Tbl. 4]{dengAtmosphericLevelsCytotoxicity2006}, \cite[Sec. 6.7]{worldhealthorganizationregionalofficeforeuropeAirQualityGuidelines2000},
+\cite[Tbl. 1]{varConcentrationTrendSeasonal2000}, and \cite[Tbl. 1]{kimChemicalCompositionFine2003},
+I created a chart measuring the concentration of lead (Pb) in the air of Guiyu, China, in comparison to two other Asian
+cities and World Health Organization estimates of non-urban areas in Europe.
+
+\newpage
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{"images/Lead Air.png"}
+    \caption[Lead air concentration]{Lead air concentration in Guiyu vs. selected control areas \cite{dengAtmosphericLevelsCytotoxicity2006},
+    \cite{worldhealthorganizationregionalofficeforeuropeAirQualityGuidelines2000},
+    \cite{varConcentrationTrendSeasonal2000}, \cite{kimChemicalCompositionFine2003}}
+\end{figure}
+
+TSP refers to Total Suspended Particles (particles less than 30-60 micrometers) and
+PM means Particulate Matter (particles smaller than 2.5 micrometers) \cite[p. 6945]{dengAtmosphericLevelsCytotoxicity2006}.
+As one can see, both measures are far higher in Guiyu than in other Asian cities like Tokyo and Seoul.
+They are also much higher than what the World Health Organization estimates the average to be for non-urban areas in Europe.
+Please note that for \cite{kimChemicalCompositionFine2003}, I considered the “Fine” parameter in Table 1,
+as that relates to the same PM measure of 2.5 micrometers \cite[p. 754]{kimChemicalCompositionFine2003}
+that \cite{dengAtmosphericLevelsCytotoxicity2006} uses. Please note that \cite[Sec. 6.7]{worldhealthorganizationregionalofficeforeuropeAirQualityGuidelines2000}
+lists their measurement as 0.15 micrograms per cubic meter, which is equal to 150 nanograms per cubic meter, as shown in the above chart.
+Also note that the WHO did not specify if they considered TSP or PM measures
+\cite[Sec. 6.7]{worldhealthorganizationregionalofficeforeuropeAirQualityGuidelines2000}.
+
+In \cite{ouaboEcologicalRiskHuman2019}, researchers took soil samples from the Makea, Ngodi, and New Bell informal e-waste recycling sites in Douala, Cameroon.
+They compared these to soil samples from a control area. They were measuring concentrations of the heavy metals lead (Pb), nickel (Ni), zinc (Zn),
+cadmium (Cd), chromium (Cr), copper (Cu), and cobalt (Co).
+
+\newpage
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{"images/Soil Samples.png"}
+    \caption[Soil Samples in Cameroon]{\cite[Fig. 2]{ouaboEcologicalRiskHuman2019}}
+\end{figure}
+
+The researchers found that the heavy metal concentrations in the three e-waste recycling sites were much higher
+than in the control site. Of these, they noted that lead, nickel, copper, and cadmium posed the highest ecological risk.
+This is particularly troubling for lead since it is much more concentrated in these samples than any other metal.
+Chromium was considered lower, but still significant risk.  Zinc was considered the lowest risk, ecologically.
+In all, all three sites were considered to pose very high ecological risk \cite[p. 7]{ouaboEcologicalRiskHuman2019}.
+
+Researchers in \cite{sepulvedaReviewEnvironmentalFate2010} summarized the diverse ecological effects of informal
+e-waste recycling in China and India. They produced the following diagram:
+
+\newpage
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{"images/Overview.png"}
+    \caption[Ecological Problems Diagram]{Summary of ecological problems of informal e-waste recycling \cite[Fig. 1]{sepulvedaReviewEnvironmentalFate2010}}
+\end{figure}
+
+As one can see, informal e-waste recycling practices have diverse and wide-reaching environmental effects.
+Each step in the informal process (dumping, dismantling, burning, and acid leaching) causes its own set
+of environmental problems. Each of these effects are complexly related in a web.
+To describe a few of these effects: leachates from bathing e-waste in acid can leak into the soil;
+fumes from burning can be transported long distances; effluents from the byproducts of leaching
+can get into water and the life-forms there; and coarse particles from shredding e-waste can enter
+the soil and eventually the groundwater. All these effects can harm humans as well, as we breathe the
+contaminated air; drink, bathe, and fish in the contaminated water; and eat contaminated animals and plants.
+
 \subsection{Equity Problems}
+
+As shown in \ref{sec:where}, WEEE is frequently sent from richer to poorer countries, sometimes illegally
+\cite{unitednationsofficeondrugsandcrimeunodcTransnationalOrganizedCrime2013}. If we also consider that poorer countries are less likely
+to have developed formal WEEE recycling practices and infrastructure \cite[p. 290]{perkinsEWasteGlobalHazard2014},
+we can conclude that less developed countries take on a greater health and environmental burden
+in processing e-waste than more developed countries. 
+
+However, poorer countries can be active attractors of WEEE because it is a valuable income stream for the local economy 
+\cite{davisPollutionHavenHypothesis2019}, \cite[Sec. 6]{sthiannopkaoHandlingEwasteDeveloped2013}.
+Although some workers may owe their livelihoods to e-waste, and smaller economies may benefit from the informal industry, we can't
+ignore the serious health and ecological problems these people are the primary victims of.
+
+This poses an inherent contradiction. If the Global North were to stop exporting e-waste to the Global
+South completely, this may cause wide-scale livelihood loss and denial of opportunity of the sort that
+caused some informal e-waste recycling sites to emerge in the first place \cite[p. 43]{davisPollutionHavenHypothesis2019}.
+But continuing to supply the Global South with such dangerous materials poses long-term ill-effects as well.
+Maintaining e-waste hubs in the Global South for local economy and ensuring local health and environmental safety are at odds.
 
 \section{What's Being Done?}
 
