@@ -24,6 +24,7 @@
 \maketitle
 \end{titlepage}
 
+\pagenumbering{roman}
 \tableofcontents
 
 \newpage
@@ -32,6 +33,7 @@
 
 \newpage
 
+\pagenumbering{arabic}
 \section{Introduction}
 
 This is a research project examining the various sustainability aspects of electronic waste. 
@@ -402,7 +404,7 @@ Another problem is that the scope of the Directive is limited by the large numbe
 categories that are exempt from it, like military equipment and implantable medical devices
 \cite[Art. 2]{europeanunionDirective2011652011}.
 
-\subsection{In Canada}
+\subsection{In Canada} \label{sec:incanada}
 
 Canada exists in a formal WEEE-recycling context \cite[p. 157]{ceballosFormalElectronicRecycling2016}.
 However, there exists no federal legislation concerning e-waste.
@@ -721,29 +723,254 @@ the Global South remains unclear.
 
 \section{What's Being Done in Montreal?}
 
+In this appendix, I will review the current state if what is happening in Montreal regarding properly
+handing e-waste. I will review public and private options for individuals to formally recycle
+their electronics. I will then discuss broad trends in what Montrealers have been doing with
+their electronics over a ten-year period.
+
 \subsection{Quebec Provincial Law}
+
+Quebec has participated in Extended Producer Responsibility since 2011 \cite{quebecRegulationRespectingRecovery2011}.
+Our provincial law is called \textit{Règlement sur la récupération et la valorisation de produits par
+les entreprises}, which in English, translates to \textit{Regulation respecting the recovery and
+reclamation of products by enterprises} \cite{quebecRegulationRespectingRecovery2011}.
+This is Regulation Q-2, r. 40.1 of the \textit{Loi sur la qualité de l'environnement}, or
+the \textit{Environment Quality Act} \cite{quebecEnvironmentQualityAct1972}.
+
+Typical WEEE products are defined in Chapter 4, Division 1 \cite{quebecRegulationRespectingRecovery2011}.
+Note that, consistent with the assertion in \cite[p. 20]{baldeGlobalEwasteMonitor2024} 
+that batteries are a separate waste stream, the Regulation defines batteries in Chapter 4, Division 2
+\cite{quebecRegulationRespectingRecovery2011}.
+
+As found in Section 6 \cite{quebecRegulationRespectingRecovery2011}, the Regulation gives enterprises
+the discretion to join an Individual (IPR) or Collective (CPR) Producer Responsibility Organization.
+The distinction between these was discussed in \ref{sec:incanada}.
 
 \subsection{Private and Public E-Waste Recycling in Montreal}
 
+Residents of the Agglomeration of Montreal can use one of Montréal's seven \textit{Ecocentres}
+\cite{villedemontrealTakeItemsEcocentre}, \cite{villedemontrealTakingItemsMaterials}.
+These are publicly accessible waste disposal facilities around the island of Montreal.
+They accept both small devices like phones and computers, as well as large appliances like refrigerators.
+However, there are serious limitations to their effectiveness.
+Residents must bring their own materials, as there is no pick-up service available.
+This means that people must haul their own heavy items like stoves.
+A compounding problem to this is that residents must unload their own heavy materials.
+An additional problem is that users must be residents of the Agglomeration of Montreal,
+not all areas in the Greater Montreal Area are included, such as Laval. Users of an
+\textit{Ecocentre} must bring photo ID and other accompanying documents, as well. Each \textit{Ecocentre}
+also has a list of permitted vehicles.
+
+For a private-sector option, \textit{Electrobac} is a company that accepts small e-waste items
+in over 270 collection bins in Quebec and Ontario \cite{Electrobac}. They are EPRA certified
+and accept a variety of small items like phones and cables. A problem with \textit{Electrobac}
+is that their scope is small, only operating in two provinces and with a limited number
+of collection bins to share among them. Also, they don't accept large items, as their
+collection method is exclusively via their small bins.
+
+For another private-sector option with larger scope, the Electronics Recycling Association (ERA)
+\cite{electronic.recycling.associationComputerRecyclingVancouver} operates in Canada
+and the United States. They offer a pick-up service and work with commercial and industrial
+generators of e-waste as well as individuals. A downside to them is that they do not appear
+to be EPRA certified. They do not advertise as such on their website and do not appear on the
+EPRAs official list of Stewards \cite{electronicproductsrecyclingassociationepraStewardList}.
+
 \subsection{The E-Waste Habits of Montrealers}
+
+Over a 10-year period, from 2011 to 2021, data was collected (every two years) as part of the
+Households and the Environment Survey \cite{statisticscanadaHouseholdsEnvironmentSurvey2022}.
+This survey measures Canadians' environmental practices. From this survey,
+two datasets were created that are of relevance to e-waste. The first and most important of these is
+\cite{statisticscanadaTable3810015401Electronic2022}. It measures Canadians e-waste activities
+regarding several product categories. The second dataset relates to household hazardous
+waste, and is included for completeness only, as it contains similar statistics for Canadians'
+activities regarding batteries \cite{statisticscanadaTable3810015501Household2022}.
+
+The code I wrote to process these datasets into the charts I created is available
+in this public, open-source repository: https://github.com/BlackSound1/SUST601-Project.
+It is important to at least skim each Python notebook (the .ipynb files), as I explain exactly
+how each dataset is processed and the decisions I made along the way.
+
+In the analysis of these data, a chart is presented per product category.
+It reveals the specific activities Montrealers took toward that specific type of
+item once they had products they wished to dispose of. The chart is organized by year on the x-axis.
+Colorblind friendliness was considered as much as possible.
+
+Important to note: in each product category, not all possible e-waste activities have data available.
+This is always represented with a grey 'No data' bar. This is computed by adding up the percentages
+of all the other e-waste activities available in a given year, and if the result is lower than 100\%,
+marking the difference as 'No data'. Another note: some bars clearly add up to more than 100\%.
+This is possible because one of the e-waste activities is “Sill had unwanted \_\_\_\_\_ at the time of interview”.
+It is entirely feasible, for example, for a person to have donated an e-waste computer and still
+have an e-waste computer they haven't done anything with yet. This lets it be possible for an
+interviewee to have selected more than one of the e-waste activities.
+
+One serious downside to these datasets is that the proportion of Montrealers throwing an item in
+the garbage is not available for any product category (except batteries, which are not e-waste).
+The e-waste activities revealed in the following charts are either all positive activities like
+donation or returning, or neutral activities like doing nothing. Therefore, their relative
+proportions increasing or decreasing don't matter as much as how these activities would fare
+against the unknown proportion of Montrealers disposing of their items in the garbage.
+Since that perspective is not known, it is not possible to make conclusions as to the degree
+of the environmental friendliness of Montrealers' e-waste activities.
+This is why this analysis is relegated to an Appendix: it is included for discussion and comparison alone.
 
 \subsubsection{Computers}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{"images/computers_stacked_plot.png"}
+    \caption[Computers Chart]{What did Montrealers do with computers?
+    Data from \cite{statisticscanadaTable3810015401Electronic2022}}
+\end{figure}
+
+One heartening conclusion we can infer from this chart is that the proportion of Montrealers
+who took their e-waste computers to a depot or drop-off center increased over the study period.
+This is a trend that will reveal itself in the other product categories.
+
+The proportion of Montrealers who still possessed e-waste computers when questioned remained
+relatively consistent over the study period. This may indicate that when Montrealers got new computers,
+they didn't necessarily discard their old ones. As speculation,
+it could be that the old computers were unwanted, but the owner felt that discarding
+them could pose some risk of losing data.
+
+Another point to discuss is Montrealers donation habits for e-waste computers.
+Although 2015 has no available data for this, it seems like the trend was declining until 2015,
+after which it started slowly expanding again. It's good that this activity has been increasing
+in popularity since 2017, but it's unfortunate that it remains such a small proportion of all
+e-waste activities for computers.
+
+Based on the given data, Montrealers returned the greatest proportion of e-waste computers
+to suppliers or retailers in 2017, with decreasing popularity after.
+
+\newpage
+
 \subsubsection{Printers}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{"images/printers_stacked_plot.png"}
+    \caption[Printer Chart]{What did Montrealers do with printers?
+    Data from \cite{statisticscanadaTable3810015401Electronic2022}}
+\end{figure}
+
+Once again, we see that the general trend of people taking their unwanted printers to a depot
+or drop-off center is increasing. The proportion of Montrealers who still possessed unwanted
+printers to dispose of also remains relatively constant, however.
+
+For the other e-waste activities, the data is too sparse to conclude any specific trends.
+
+\newpage
 
 \subsubsection{Televisions}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{"images/televisions_stacked_plot.png"}
+    \caption[TV Chart]{What did Montrealers do with TVs?
+    Data from \cite{statisticscanadaTable3810015401Electronic2022}}
+\end{figure}
+
+For televisions, the drop-off center trend is slightly less obvious. The later years of the
+study have a higher proportion of Montrealers disposing of their TVs at a drop-off center
+than the earlier years. However, 2021 has a lower proportion than 2019. It remains to be seen
+whether this proportion will increase again. However, it can be cautiously said that the fact
+that the later years show this general increase over the earlier years is an encouraging fact, by itself.
+
+Another interesting observation is that the proportion of Montrealers returning their TVs to a
+supplier or retailer is consistently small. To speculate, people might feel that TVs are quick
+to become obsolete so retailers might be unlikely to resell them.
+
+The trend of Montrealers donating their e-waste TVs was decreasing until 2019, when there was no
+usable data. It appears to have increased in 2021. I can't conclude whether this is truly good,
+because if the 2019 data were available and it showed a large proportion, then the 2021 value
+would actually be a decrease.
+
+\newpage
+
 \subsubsection{Cell Phones}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{"images/phones_stacked_plot.png"}
+    \caption[Cellphone Chart]{What did Montrealers do with cell phones?
+    Data from \cite{statisticscanadaTable3810015401Electronic2022}}
+\end{figure}
+
+Although there are dips in the proportion of Montrealers who took their e-waste cell
+phones to a drop-off center, the overall trend is increasing.
+
+Interestingly, the proportion of Montrealers who still owned unwanted cell phones to
+dispose of has remained consistent for the last several years, since 2015. Again,
+it might be the case that people fear disposing of their cell phones, as they can
+contain so much personal data.
+
+Montrealers taking their e-waste cell phones back to a supplier or retailer is an
+overall decreasing trend since 2013, perhaps for the same reason.
+
+\newpage
 
 \subsubsection{Landline Phones}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{"images/landlines_stacked_plot.png"}
+    \caption[Landline Chart]{What did Montrealers do with landline phones?
+    Data from \cite{statisticscanadaTable3810015401Electronic2022}}
+\end{figure}
+
+This product category shows some of the limitations of this dataset. Only three years are available,
+and only two e-waste activities. For the trend of Montrealers giving their old landlines to a drop-off center,
+the data paints a less obvious picture. If one were to create a line of best fit between the blue bars
+of 2019 and 2021, the line would be going up. But since there's so little available data, the final
+year showing a downward trend is significant.
+
+There appears to be no appreciable difference in the proportion of Montrealers who still had e-waste
+landline phones. This may be because Montrealers are not buying new landlines, as they can be seen as
+obsolete compared to smartphones. This would leave the number of unused landlines consistent if the
+owners never decided to discard them.
+
+\newpage
+
 \subsubsection{Audiovisual Equipment}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{"images/av_stacked_plot.png"}
+    \caption[AV Chart]{What did Montrealers do with AV equipment?
+    Data from \cite{statisticscanadaTable3810015401Electronic2022}}
+\end{figure}
+
+This is the final normal WEEE product category examined here. I analyzed a few others in the
+code written to explore this dataset, but those categories had data that were too sparse to use effectively.
+
+The overall trend of Montrealers giving their e-waste to a drop-off center again appears to be rising,
+even though this trend does have a noticeable dip in 2017.
+
+Data on the other e-waste activities are too sparse to come to interesting conclusions.
+
+\newpage
 
 \subsubsection{Batteries}
 
-\newpage
+This is a product category that is not normally considered e-waste, as shown earlier in the report.
+However, for comparison, I will still briefly discuss findings on Montrealers habits toward them.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{"images/batteries_stacked_plot.png"}
+    \caption[Batteries Chart]{What did Montrealers do with batteries?
+    Data from \cite{statisticscanadaTable3810015401Electronic2022}}
+\end{figure}
+
+The proportion of Montrealers taking their dead batteries to a drop-off center seems consistent
+throughout the study period, as does the proportion of Montrealers who still had unwanted batteries.
+A possible reason for this may be people waiting until they have enough dead batteries to be worth
+properly disposing of, which may take a long time.
+
+Thankfully, the proportion of Montrealers putting their dead batteries in the garbage is quite
+small compared to the other activities. Note that this is the only category with such data.
 
 \printbibliography[title={Bibliography}]
 
 \end{document}
-
