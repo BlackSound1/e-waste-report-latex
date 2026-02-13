@@ -3,7 +3,7 @@
 This is the typeset version of an original research report I did during my studies in the
 Sustainability Perspectives graduate microprogram at Concordia University.
 
-This is original research produced by Matthew Segal.
+This is original research produced by &copy; Matthew Segal 2024.
 
 I studied electronic waste (e-waste) from a global and Canadian perspective: what it is;
 how it's created; where it goes; and the health, environmental, and equity challenges inherent
